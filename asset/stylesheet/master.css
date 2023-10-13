@@ -1,0 +1,461 @@
+.menu {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background-color: rgba(231, 224, 222, 0.262745098);
+  z-index: 999;
+}
+.menu > .row {
+  width: 100%;
+  height: 100%;
+  padding: 0 100px;
+}
+.menu > .row > .logo {
+  width: 20%;
+  height: 70px;
+  background-image: url(../img/logo-01.png);
+  background-size: 150px;
+  background-repeat: no-repeat;
+  display: flex;
+  background-position: 10px;
+}
+.menu > .row > nav {
+  width: 60%;
+  height: 70px;
+}
+.menu > .row > nav > ul {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.menu > .row > nav > ul > li {
+  margin-left: 15px;
+  position: relative;
+}
+.menu > .row > nav > ul > li:first-of-type {
+  color: blue;
+}
+.menu > .row > nav > ul > li:hover > ul {
+  height: 130px;
+  visibility: visible;
+}
+.menu > .row > nav > ul > li > ul {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 250%;
+  height: 0;
+  visibility: hidden;
+  transition: 0.4s;
+  background-color: #fff;
+  overflow: hidden;
+}
+.menu > .row > nav > ul > li > ul > li {
+  padding: 10px 5px;
+}
+.menu > .row > nav > ul > li > ul > li > a {
+  color: black;
+  text-transform: capitalize;
+}
+.menu > .row > nav > ul > li > a {
+  transition: 0.4s;
+  text-transform: capitalize;
+}
+.menu > .row > nav > ul > li > a:hover {
+  color: rgb(90, 90, 90);
+}
+.menu > .row > .icon {
+  width: 20%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.menu > .row > .icon > a:hover > svg {
+  color: #4e3eff;
+}
+.menu > .row > .icon > a > svg {
+  transition: 0.4s;
+  width: 20px;
+  height: 20px;
+}
+
+.slid {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slid > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20% 200px;
+}
+.slid > div:nth-of-type(1) {
+  background-image: url(../img/slide-02.jpg);
+  background-position: -100px 0;
+  opacity: 0;
+  animation: slid1 15s infinite;
+}
+.slid > div:nth-of-type(2) {
+  background-image: url(../img/slide-01.jpg);
+  background-position: -100px 0;
+  opacity: 0;
+  animation: slid2 15s infinite;
+}
+.slid > div:nth-of-type(3) {
+  background-image: url(../img/slide-03.jpg);
+  background-position: -100px 0;
+  opacity: 0;
+  animation: slid3 15s infinite;
+}
+.slid > div * {
+  text-transform: capitalize;
+  margin: 30px 0;
+}
+.slid > div > h3 {
+  font-size: 30px;
+  transform: translateY(-200px);
+  opacity: 0;
+  animation: h3 5s infinite;
+}
+.slid > div > h2 {
+  font-size: 60px;
+  font-weight: bold;
+  transform: translateX(300px);
+  opacity: 0;
+  animation: h2 5s infinite;
+}
+.slid > div > span {
+  display: flex;
+  transform: translateY(200px);
+  opacity: 0;
+  animation: span 5s infinite;
+}
+.slid > div > span > a {
+  padding: 15px 40px;
+  border-radius: 50px;
+  background-color: #0077ff;
+  color: #fff;
+  transition: 0.4s;
+}
+.slid > div > span > a:hover {
+  background-color: #0c0c0c;
+}
+
+@keyframes h3 {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  20%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes h2 {
+  0%, 20% {
+    transform: translatex(300px);
+    opacity: 0;
+  }
+  40%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes span {
+  0%, 40% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  60%, 100% {
+    transform: translateY(0) rotatex(360deg);
+    opacity: 1;
+  }
+}
+@keyframes slid1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slid2 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slid3 {
+  0% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 0;
+  }
+  73% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.category {
+  width: 100%;
+  height: 50vh;
+}
+.category > .row {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.category > .row > figure {
+  width: 25%;
+  height: 30vh;
+  position: relative;
+  border: 1px solid #3c3c3c;
+}
+.category > .row > figure:hover::after {
+  opacity: 1;
+}
+.category > .row > figure::after {
+  content: "shop now";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 102, 255, 0.5647058824);
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 20px;
+  align-items: end;
+  text-decoration: underline;
+  opacity: 0;
+  transition: 0.4s;
+}
+.category > .row > figure > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.category > .row > figure > figcaption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.category > .row > figure > figcaption > h6 {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.category > .row > figure > figcaption > p {
+  color: rgb(99, 99, 99);
+  margin-top: 15px;
+}
+
+.shop {
+  width: 100%;
+  height: 300vh;
+  padding: 100px;
+}
+.shop > h2 {
+  width: 100%;
+  height: 3%;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.shop > .row {
+  width: 100%;
+  height: 4%;
+  align-items: center;
+  justify-content: space-between;
+}
+.shop > .row > nav {
+  width: 50%;
+  height: 100%;
+}
+.shop > .row > nav > ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: start;
+}
+.shop > .row > nav > ul > li {
+  margin-right: 15px;
+}
+.shop > .row > nav > ul > li > a {
+  text-transform: capitalize;
+  color: #303030;
+  transition: 0.4s;
+}
+.shop > .row > nav > ul > li > a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+.shop > .row > div {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.shop > .row > div > span {
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+.shop > .row > div > span > a {
+  font-size: 20px;
+}
+.shop > .row > div > span > a > svg {
+  width: 20px;
+  height: 20px;
+}
+.shop > .figure {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.shop > .figure > figure {
+  width: 24%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+.shop > .figure > figure > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  transition: 0.4s;
+}
+.shop > .figure > figure > figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+}
+.shop > .figure > figure > figcaption > h6 {
+  font-size: 15px;
+  text-transform: capitalize;
+  color: #999999;
+}
+.shop > .figure > figure > figcaption > p {
+  color: #746b66;
+  margin-top: 8px;
+}
+.shop > .figure > figure::after {
+  content: "quick view";
+  position: absolute;
+  display: flex;
+  padding: 20px 30px;
+  color: #000000;
+  background-color: #fff;
+  border-radius: 50px;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-transform: capitalize;
+  opacity: 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.shop > .figure > figure:hover::after {
+  opacity: 1;
+  bottom: 100px;
+}
+.shop > .figure > figure:hover > img {
+  transform: scale(1.1);
+}
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  padding: 100px;
+  background-color: #222;
+}
+.footer > .row {
+  width: 100%;
+  height: 70%;
+  justify-content: space-evenly;
+}
+.footer > .row > div {
+  width: 22%;
+  text-transform: capitalize;
+  border-right: 1px solid #9f9e9f;
+}
+.footer > .row > div > h3 {
+  color: #fff;
+  font-size: 25px;
+}
+.footer > .row > div > ul > li {
+  margin: 20px 0;
+}
+.footer > .row > div > ul > li:hover > a {
+  color: #0077ff;
+}
+.footer > .row > div > ul > li > a {
+  color: #9f9e9f;
+  transition: 0.4s;
+}
+.footer > .row > div > p {
+  color: #9f9e9f;
+  margin: 20px 0;
+}
+.footer > .row > div > .row {
+  width: 100%;
+  margin: 20px 0;
+}
+.footer > .row > div > .row > a {
+  margin-right: 20px;
+}
+.footer > .row > div > .row > a:hover > svg {
+  color: #0077ff;
+}
+.footer > .row > div > .row > a > svg {
+  width: 25px;
+  height: 25px;
+  color: #9f9e9f;
+  transition: 0.4s;
+}
+.footer > .row > div > h2 {
+  text-transform: uppercase;
+  color: #00ffbb;
+  margin: 40px 0;
+}
+.footer > .row > div > img {
+  width: 80px;
+}/*# sourceMappingURL=master.css.map */
